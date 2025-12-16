@@ -59,6 +59,30 @@ pre{
   color:#000000;        /* grün */
   font-family:'Courier New', monospace;
 }
+
+  #theme-toggle:hover {
+  background:#5555ff; /* schöner Hover-Effekt */
+}
+  
+  /* Dark Mode */
+body.dark-mode {
+  background: #ffffff;   /* helle Seite */
+  color: #000000;        /* Text schwarz */
+}
+
+/* Optional: Header und Buttons invertieren */
+body.dark-mode header {
+  background: #dddddd;
+}
+
+body.dark-mode button {
+  background: #bbbbbb;
+  color: #000000;
+}
+
+body.dark-mode button:hover {
+  background: #999999;
+}
 </style>
 </head>
 
@@ -68,6 +92,7 @@ pre{
   <button onclick="show('website')">🌐 Website Code</button>
   <button onclick="show('bot')">🤖 Bot Code</button>
   <button onclick="show('sonstiges')">📦 Node.js</button>
+  <button id="theme-toggle" style="margin-left:auto;">🌗 Theme</button>
 </header>
 
 <!-- WEBSITE CODE -->
@@ -235,9 +260,18 @@ function show(id){
     .forEach(s => s.style.display = "none");
   document.getElementById(id).style.display = "block";
 }
-
+  
 // Standard beim Start
 show("website");
+</script>
+  
+<script>
+const toggleBtn = document.getElementById("theme-toggle");
+
+toggleBtn.addEventListener("click", () => {
+  // Body-Toggle für Hintergrund & Text
+  document.body.classList.toggle("dark-mode");
+});
 </script>
 
 </body>
