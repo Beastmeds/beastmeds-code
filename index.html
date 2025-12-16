@@ -83,6 +83,29 @@ body.dark-mode button {
 body.dark-mode button:hover {
   background: #999999;
 }
+
+  /* Sections Hintergrund & Text */
+body.dark-mode .section {
+  background: #ffffff;  /* helle Section bei Light Mode */
+  color: #000000;       /* Text schwarz */
+}
+
+/* Überschriften in Sections umschalten */
+body.dark-mode .section h2 {
+  color: #ff9900; /* andere Farbe im Light Mode */
+}
+
+/* Buttons innerhalb Sections (falls du welche hast) */
+body.dark-mode .section button {
+  background: #cccccc;
+  color: #000000;
+}
+
+/* <pre> Code bleibt grün */
+body.dark-mode pre {
+  background: #0b0e25;  /* wie vorher dunkel */
+  color: #00ffcc;       /* bleibt grün */
+}
 </style>
 </head>
 
