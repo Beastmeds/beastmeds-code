@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Code Auswahl</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#0f1220;
+  color:white;
+}
+
+header{
+  background:#151a35;
+  padding:10px;
+  display:flex;
+  gap:10px;
+}
+
+button{
+  background:#2b2f77;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#3a40a0;
+}
+
+.section{
+  display:none;
+  padding:15px;
+}
+
+pre{
+  background:#0b0e25;
+  padding:15px;
+  border-radius:8px;
+  overflow:auto;
+  color:#00ffcc;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <button onclick="show('website')">🌐 Website Code</button>
+  <button onclick="show('bot')">🤖 Bot Code</button>
+  <button onclick="show('sonstiges')">📦 Node.js</button>
+</header>
+
+<!-- WEBSITE CODE -->
+<div id="website" class="section">
+  <h2>🌐 Website Code</h2>
+  <pre>
+🧱 HTML-Grundstruktur (Website-Code)
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  </style>
+</head>
+<body>
+</body>
+</html>
+
+🔹 <!DOCTYPE html>
+
+➡️ Sagt dem Browser:
+„Das ist eine moderne HTML5-Website“
+
+🔹 <html> ... </html>
+
+➡️ Alles auf der Website ist hier drin
+➡️ Der komplette Seiten-Container
+
+🔹 <head> ... </head>
+
+➡️ Unsichtbarer Bereich
+Hier kommt rein:
+
+Titel der Seite
+
+Styles (CSS)
+
+Schriftarten
+
+Meta-Infos
+
+🔹 <style> ... </style>
+
+➡️ CSS = Design
+
+<style>
+  body {
+    background: black;
+    color: white;
+  }
+</style>
+
+
+👉 Farben, Größen, Animationen
+
+🔹 </style>
+
+➡️ Ende vom CSS-Block
+
+🔹 <body> ... </body>
+
+➡️ Alles was man sieht
+
+Text
+
+Buttons
+
+Spiele
+
+Bilder
+
+<body>
+  <h1>Hallo Welt</h1>
+</body>
+
+🧠 JavaScript (Logik & Action)
+<script>
+  alert("Hallo!");
+</script>
+
+
+➡️ Macht Dinge interaktiv
+
+Klicks
+
+Spiele
+
+Karten ziehen
+
+Punkte zählen
+  </pre>
+</div>
+
+<!-- BOT CODE -->
+<div id="bot" class="section">
+  <h2>🤖 Bot Code</h2>
+  <pre>
+const { Client } = require("discord.js");
+const client = new Client();
+
+client.on("ready", () => {
+  console.log("Bot online!");
+});
+
+client.login("TOKEN");
+  </pre>
+</div>
+
+<!-- SONSTIGES -->
+<div id="sonstiges" class="section">
+  <h2>📦 Node.js Code</h2>
+  <pre>
+🌍 Node.js – WAS IST DAS?
+🔥 Node.js
+
+➡️ JavaScript außerhalb des Browsers
+
+Kurz gesagt:
+Browser-JS	Node.js
+läuft im Browser	läuft auf dem Server
+Websites	Server, Bots, Games
+Frontend	Backend
+🧪 Beispiel Node.js Code
+console.log("Server läuft!");
+
+🌐 Mini-Server mit Node.js
+const http = require("http");
+
+http.createServer((req, res) => {
+  res.end("Hallo von Node.js!");
+}).listen(3000);
+
+
+➡️ Öffne im Browser:
+http://localhost:3000
+
+🔌 Wichtige Node.js Begriffe
+🔹 require()
+
+➡️ Holt Module
+
+const fs = require("fs");
+
+🔹 npm
+
+➡️ Paket-Manager
+
+npm install express
+
+🔹 express
+
+➡️ Super einfacher Web-Server
+
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Hallo!");
+});
+
+app.listen(3000);
+
+🧩 Kurz-Übersicht (Spickzettel)
+Code	Bedeutung
+<head>	Infos & Styles
+<style>	Design
+<body>	Sichtbarer Inhalt
+<script>	Logik
+Node.js	Server-JavaScript
+npm	Module installieren
+  </pre>
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll(".section")
+    .forEach(s => s.style.display = "none");
+  document.getElementById(id).style.display = "block";
+}
+
+// Standard beim Start
+show("website");
+</script>
+
+</body>
+</html>
