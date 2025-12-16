@@ -123,26 +123,27 @@ body.dark-mode pre {
   <h2>🌐 Website Code</h2>
   <pre>
 🧱 HTML-Grundstruktur (Website-Code)
-<!DOCTYPE html>
-&lt;html&gt;
-&lt;head&gt;
-  &lt;style&gt;
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<span style="color:#008000;"><!DOCTYPE html></span>
+<span style="color:#008000;">&lt;html&gt;</span>
+<span style="color:#008000;">&lt;head&gt;</span>
+ <span style="color:#008000;">&lt;style&gt;</span>
+  <span style="color:#008000;">&lt;/style&gt;</span>
+<span style="color:#008000;">&lt;/head&gt;</span>
+<span style="color:#008000;">&lt;body&gt;</span>
+<span style="color:#008000;">&lt;/body&gt;</span>
+<span style="color:#008000;">&lt;/html&gt;</span>
 
-🔹 &lt;!DOCTYPE html&gt;
+🔹 <span style="color:#008000;">&lt;!DOCTYPE html&gt;</span>
 
 ➡️ Sagt dem Browser:
 „Das ist eine moderne HTML5-Website“
 
 🔹 <span style="color:#008000;">&lt;html&gt; ... &lt;/html&gt;</span>
+    
 ➡️ Alles auf der Website ist hier drin
 ➡️ Der komplette Seiten-Container
 
-🔹 ```&lt;head&gt; ... &lt;/head&gt;```
+🔹 <span style="color:#008000;">&lt;head&gt; ... &lt;/head&gt;</span>
 
 ➡️ Unsichtbarer Bereich
 Hier kommt rein:
@@ -152,24 +153,24 @@ Styles (CSS)
 Schriftarten
 Meta-Infos
 
-🔹 &lt;style&gt; ... &lt;/style&gt;
+🔹 <span style="color:#008000;">&lt;style&gt; ... &lt;/style&gt;</span>
 
 ➡️ CSS = Design
 
-&lt;style&gt;
-  body {
-    background: black;
-    color: white;
-  }
-&lt;/style&gt;
+<span style="color:#008000;">&lt;style&gt;</span>
+ <span style="color:#008000;">body {</span>
+    <span style="color:#008000;">background: black;</span>
+    <span style="color:#008000;">color: white;</span>
+  <span style="color:#008000;">}</span>
+<span style="color:#008000;">&lt;/style&gt;</span>
 
 👉 Farben, Größen, Animationen
 
-🔹&lt;/style&gt;
+🔹<span style="color:#008000;">&lt;/style&gt;</span>
 
 ➡️ Ende vom CSS-Block
 
-🔹 &lt;body&gt; ... &lt;/body&gt;
+🔹 <span style="color:#008000;">&lt;body&gt; ... &lt;/body&gt;</span>
 
 ➡️ Alles was man sieht
 
@@ -178,14 +179,14 @@ Buttons
 Spiele
 Bilder
     
-&lt;body&gt;
-  &lt;h1Hallo Welt/h1&gt;
-&lt;/body&gt;
+<span style="color:#008000;">&lt;body&gt;</span>
+  <span style="color:#008000;">&lt;h1Hallo Welt/h1&gt;</span>
+<span style="color:#008000;">&lt;/body&gt;</span>
 
 🧠 JavaScript (Logik & Action)
-&lt;script&gt;
-  alert("Hallo!");
-&lt;/script&gt;
+<span style="color:#008000;">  &lt;script&gt;</span>
+  <span style="color:#008000;">alert("Hallo!");</span>
+<span style="color:#008000;">&lt;/script&gt;</span>
 
 
 ➡️ Macht Dinge interaktiv
@@ -227,51 +228,53 @@ läuft im Browser	läuft auf dem Server
 Websites	Server, Bots, Games
 Frontend	Backend
 🧪 Beispiel Node.js Code
-console.log("Server läuft!");
+<span style="color:#008000;">console.log("Server läuft!");</span>
 
 🌐 Mini-Server mit Node.js
-const http = require("http");
+    
+<span style="color:#008000;">const http = require("http");</span>
 
-http.createServer((req, res) => {
-  res.end("Hallo von Node.js!");
-}).listen(3000);
+<span style="color:#008000;">http.createServer((req, res) => {</span>
+  <span style="color:#008000;">res.end("Hallo von Node.js!");</span>
+<span style="color:#008000;">}).listen(3000);</span>
 
 
 ➡️ Öffne im Browser:
-http://localhost:3000
+<span style="color:#008000;">http://localhost:3000</span>
 
 🔌 Wichtige Node.js Begriffe
-🔹 require()
+
+🔹 <span style="color:#008000;">require()</span>
 
 ➡️ Holt Module
 
-const fs = require("fs");
+<span style="color:#008000;">const fs = require("fs");</span>
 
-🔹 npm
+🔹 <span style="color:#008000;">npm</span>
 
 ➡️ Paket-Manager
 
-npm install express
+<span style="color:#008000;">npm install express</span>
 
-🔹 express
+🔹 <span style="color:#008000;">express</span>
 
 ➡️ Super einfacher Web-Server
 
-const express = require("express");
-const app = express();
+<span style="color:#008000;">const express = require("express");</span>
+<span style="color:#008000;">const app = express();</span>
 
-app.get("/", (req, res) => {
-  res.send("Hallo!");
-});
+<span style="color:#008000;">app.get("/", (req, res) => {</span>
+  <span style="color:#008000;">res.send("Hallo!");</span>
+<span style="color:#008000;">});</span>
 
 app.listen(3000);
 
 🧩 Kurz-Übersicht (Spickzettel)
 Code	Bedeutung
-&lt;head&gt;	Infos & Styles
-&lt;style&gt;	Design
-&lt;body&gt;	Sichtbarer Inhalt
-&lt;script&gt;	Logik
+<span style="color:#008000;">&lt;head&gt;</span>	Infos & Styles
+<span style="color:#008000;">&lt;style&gt;</span>	Design
+<span style="color:#008000;">&lt;body&gt;</span>	Sichtbarer Inhalt
+<span style="color:#008000;">&lt;script&gt;</span>	Logik
 Node.js	Server-JavaScript
 npm	Module installieren
   </pre>
