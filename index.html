@@ -122,7 +122,8 @@ body.dark-mode pre {
 <div id="website" class="section">
   <h2>🌐 Website Code</h2>
   <pre>
-🧱 HTML-Grundstruktur (Website-Code)
+<h2>🧱 HTML-Grundstruktur (Website-Code)<h2>
+  
 <span style="color:#008000;"><!DOCTYPE html></span>
 <span style="color:#008000;">&lt;html&gt;</span>
 <span style="color:#008000;">&lt;head&gt;</span>
@@ -202,14 +203,96 @@ Punkte zählen
 <div id="bot" class="section">
   <h2>🤖 Bot Code</h2>
   <pre>
-const { Client } = require("discord.js");
-const client = new Client();
+🧱 Wichtige Code-Bausteine für Discord-Bots
+1️⃣ const { Client, GatewayIntentBits } = require('discord.js');
 
-client.on("ready", () => {
-  console.log("Bot online!");
+Bedeutung:
+Holt die Discord.js-Bibliothek, damit du einen Bot programmieren kannst.
+
+Client → Dein Bot selbst
+
+GatewayIntentBits → Bestimmt, auf welche Events der Bot hört (Nachrichten, Reaktionen, Member etc.)
+
+const { Client, GatewayIntentBits } = require('discord.js');
+
+2️⃣ const client = new Client({...});
+
+Bedeutung:
+Erstellt eine Instanz deines Bots
+
+Hier legst du fest, was der Bot alles sehen und machen darf (Intents)
+
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages] });
+
+3️⃣ client.on('messageCreate', callback)
+
+Bedeutung:
+„Event-Listener“ – der Bot reagiert, wenn jemand eine Nachricht schreibt.
+
+messageCreate → Event für neue Nachrichten
+
+callback → Funktion, die ausgeführt wird
+
+client.on('messageCreate', message => {
+  console.log(message.content);
 });
 
-client.login("TOKEN");
+4️⃣ message.channel.send('Text')
+
+Bedeutung:
+Sendet Text in den Discord-Kanal, wo die Nachricht angekommen ist.
+
+client.on('messageCreate', message => {
+  if(message.content === "!hallo") {
+    message.channel.send("Hallo, ich bin dein Bot!");
+  }
+});
+
+5️⃣ client.login('DEIN_BOT_TOKEN')
+
+Bedeutung:
+Meldet den Bot bei Discord an
+
+Ohne Token kann dein Bot nicht online gehen
+
+client.login("DEIN_BOT_TOKEN");
+
+6️⃣ require('modulename')
+
+Bedeutung:
+Holt ein externes Modul (Bibliothek), z. B. Discord.js oder fs (Dateien lesen)
+
+const fs = require('fs'); // Für Dateien
+
+7️⃣ if(...) { ... }
+
+Bedeutung:
+Überprüft eine Bedingung und führt Code nur dann aus.
+
+Z. B. wenn jemand !hallo schreibt
+
+if(message.content === "!hallo") {
+  message.channel.send("Hallo!");
+}
+
+8️⃣ Pfeilfunktion () => { ... }
+
+Bedeutung:
+Kurzschreibweise für Funktionen / „callback functions“
+
+client.on('ready', () => {
+  console.log("Bot ist online!");
+});
+
+🔹 Kurz-Spickzettel
+Code	Bedeutung
+require('discord.js')	Bibliothek importieren
+Client()	Erstellt den Bot
+client.on('messageCreate')	Reagiert auf neue Nachrichten
+message.channel.send()	Nachricht senden
+client.login('TOKEN')	Bot anmelden
+if(...) {}	Bedingungen prüfen
+()=>{}	Funktion / Callback
   </pre>
 </div>
 
